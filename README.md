@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# 26 - TMDB
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![logop5](https://p5-hall-of-fame.s3.amazonaws.com/p5logo.png)
 
-## Available Scripts
+### Objetivos
 
-In the project directory, you can run:
+En este proyecto, crearás una aplicación que muestre películas y programas de televisión. Para eso, consumirás la información de la API de [_The Movie Database_ (TMDB)](https://www.themoviedb.org/).
 
-### `npm start`
+Para armar el _front-end_, aplicarás lo aprendido hasta ahora.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para el _back-end_, deberás configurar una base de datos y construir las funcionalidades detalladas a continuación.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+⚠️ **Importante**: La información de los usuarios deberá **persistir** en el _back-end_.
 
-### `npm test`
+### ¿Qué Debe Tener Tu Aplicación?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+👩‍🏫👨‍🏫 Para armar la aplicación trabajaremos con el [**método MoSCoW**](https://www.itdo.com/blog/moscow-que-es-y-como-priorizar-en-el-desarrollo-de-tu-aplicacion/), una técnica que sirve para determinar prioridades de forma estratégica y ordenada.
 
-### `npm run build`
+En este sentido, deberás enfocarte primero en las funcionalidades _Must Have_ (de prioridad alta) antes de avanzar a funcionalidades _Should Have_ (prioridad media).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Requisitos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+👩‍🏫👨‍🏫 Para este proyecto, enfocate en completar las tareas de **prioridad alta** y **media**. Considerá las de **prioridad normal** y **baja** como un desafío para desarrollar tu portfolio.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+📕 **Prioridad Alta** (_Must Have_)
 
-### `npm run eject`
+- Buscar y listar películas.
+- Ver los detalles de una película o programa de televisión.
+- Crear usuarios.
+- _Loguear_ y _desloguear_ usuarios.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+📘 **Prioridad Media** (_Should Have_)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Agregar una película o programa a una lista de favoritos.
+- Ver una lista de favoritos.
+- Remover una película o programa de una lista de favoritos.
+- Diferenciar las rutas de _front-end_ para películas y programas de televisión.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+📗 **Prioridad Normal** (_Could Have_)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Buscar usuarios.
+- Ver el perfil de un usuario específico (con sus películas o programas favoritos).
+- Mantener sesión abierta ante un cierre del _browser_ o `refresh`.
 
-## Learn More
+📓 **Prioridad Baja** (_Won't Have_)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- _Full responsive_.
+- _Loguear_ usuarios a través de su cuenta en Google.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Pledu
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Hacé [_click_ acá](https://pledu.plataforma5.la/bootcamp/omdb/solo%20week-581874b7) para acceder al módulo correspondiente en Pledu.
