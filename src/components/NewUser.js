@@ -10,7 +10,7 @@ const NewUser = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      await axios.post("/api/newUser", {
+      await axios.post("/api/user/newUser", {
         email: email.value,
         password: password.value,
       });

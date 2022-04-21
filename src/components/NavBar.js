@@ -9,7 +9,7 @@ const NavBar = () => {
 
   const logOut = () => {
     try{
-      axios.post("/api/logout")
+      axios.post("/api/user/logout")
       usuario.toggleAuth(null)
       navigate("/")
     }catch(err){console.log(err);}
