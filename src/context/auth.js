@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 
 const authContextDefaultValues = {
+  username: null,
   email: null,
   isAuthenticated: false,
   toggleAuth: () => null,
@@ -11,21 +12,24 @@ export const AuthContext = createContext(authContextDefaultValues);
 const AuthContextProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(
     JSON.parse(localStorage.getItem("isLoggedIn")) || {
+      username: null,
       email: null,
       isAuthenticated: false,
     }
   );
 
-  const toggleAuth = (email) => {
+  const toggleAuth = (id, username) => {
     localStorage.setItem(
       "isLoggedIn",
       JSON.stringify({
-        email: email,
+        username: username,
+        id: id,
         isAuthenticated: !isLoggedIn.isAuthenticated,
       })
     );
     setIsLoggedIn({
-      email: email,
+      username: username,
+      id: id,
       isAuthenticated: !isLoggedIn.isAuthenticated,
     });
   };

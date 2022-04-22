@@ -10,11 +10,19 @@ class Users extends S.Model {
 
 Users.init(
   {
-    email: {
+    username: {
       type: S.STRING,
       allowNull: false,
       validate: {
         notEmpty: true,
+      },
+    },
+    email: {
+      type: S.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true,
       },
     },
     password: {
@@ -31,6 +39,8 @@ Users.init(
   {
     sequelize: db,
     modelName: "Users",
+    timestamps: false,
+    freezeTableName: true,
   }
 );
 

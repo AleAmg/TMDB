@@ -17,7 +17,8 @@ const LogIn = () => {
         email: email.value,
         password: password.value,
       });
-      usuario.toggleAuth(data.email)
+      usuario.toggleAuth(data.id, data.username)
+      console.log(data);
       navigate("/log") 
     } catch (err) {
       console.log(err);
