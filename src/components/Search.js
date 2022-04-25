@@ -8,7 +8,6 @@ const Search = () => {
   const api_key = "?api_key=3ba880eccd3167111b00500430da36aa&language=es-MX";
 
   const [searchMovie, setSearchMovie] = useState([]);
-  /* const search = useInput(); */
 
   const { search } = useParams();
 
@@ -23,17 +22,6 @@ const Search = () => {
 
   return (
     <div className="container is-fluid">
-      {/* <form onSubmit={handleSubmit}>
-        <label className="label">
-          <h1 className="title is-6">Search</h1>
-        </label>
-        <input
-          {...search}
-          className="input my-3"
-          type="text"
-          placeholder="Search movie"
-        />
-      </form>  */}
       <div className="my-5">
         {searchMovie.results && <Content movie={searchMovie} />}
       </div>

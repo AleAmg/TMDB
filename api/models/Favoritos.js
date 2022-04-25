@@ -5,7 +5,7 @@ class Favoritos extends S.Model {}
 Favoritos.init(
   {
     movieId: {
-      type: S.TEXT,
+      type: S.INTEGER,
     },
     userId: {
       type: S.INTEGER,
