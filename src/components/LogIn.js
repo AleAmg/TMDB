@@ -3,25 +3,30 @@ import useInput from "../hooks/useInput";
 import { useNavigate } from "react-router";
 import { useContext } from "react";
 import { AuthContext } from "../context/auth";
+import swal from "sweetalert";
 
-const LogIn = () => { 
+const LogIn = () => {
   const email = useInput();
-  const password = useInput(); 
-  const navigate = useNavigate()
-  const usuario = useContext(AuthContext)
+  const password = useInput();
+  const navigate = useNavigate();
+  const usuario = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const {data} = await axios.post("/api/user/login", {
+      const { data } = await axios.post("/api/user/login", {
         email: email.value,
         password: password.value,
       });
-      usuario.toggleAuth(data.id, data.username)
-      console.log(data);
-      navigate("/log") 
+      usuario.toggleAuth(data.id, data.username);
+      navigate("/log");
     } catch (err) {
       console.log(err);
+      swal({
+        title: "Error",
+        text: "Incorrect user or password",
+        icon: "error",
+      });
     }
   };
 

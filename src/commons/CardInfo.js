@@ -1,11 +1,9 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router";
 import { AuthContext } from "../context/auth";
-import { useContext } from "react";
-import { MdDelete , MdOutlineStarBorderPurple500} from "react-icons/md";
-
-
+import { MdDelete, MdOutlineStarBorderPurple500 } from "react-icons/md";
+import swal from "sweetalert";
 import goku from "../assets/goku.jpg";
 
 const CardInfo = () => {
@@ -47,12 +45,15 @@ const CardInfo = () => {
   const addFavorite = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("/api/favoritos/add", {
+      await axios.post("/api/favoritos/add", {
         movieId: id,
         userId: usuario.id,
       });
-      setReset(reset + 1)
-      console.log(data);
+      setReset(reset + 1);
+      swal({
+        title: "Add to favorite",
+        icon: "success",
+      });
     } catch (err) {
       console.log(err);
     }
@@ -63,8 +64,11 @@ const CardInfo = () => {
       await axios.delete(
         `/api/favoritos/delete/${parseInt(id)}/${parseInt(usuario.id)}`
       );
-      console.log("ok");
-      setReset(reset + 1)
+      setReset(reset + 1);
+      swal({
+        title: "Remove to favorite",
+        icon: "success",
+      });
     } catch (err) {
       console.log(err);
     }
@@ -124,17 +128,19 @@ const CardInfo = () => {
             </dl>
           </div>
         </div>
-        <div>
-          {favoritos.length > 0 ? (
-            <button className="button is-danger" onClick={quitFavorite}>
-              <MdDelete />
-            </button>
-          ) : (
-            <button className="button is-warning" onClick={addFavorite}>
-              <MdOutlineStarBorderPurple500 />
-            </button>
-          )}
-        </div>
+        {usuario.isAuthenticated && (
+          <div>
+            {favoritos.length > 0 ? (
+              <button className="button is-danger" onClick={quitFavorite}>
+                <MdDelete />
+              </button>
+            ) : (
+              <button className="button is-warning" onClick={addFavorite}>
+                <MdOutlineStarBorderPurple500 />
+              </button>
+            )}
+          </div>
+        )}
       </article>
     </div>
   );
