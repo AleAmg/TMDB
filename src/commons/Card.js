@@ -91,7 +91,7 @@ const Card = ({ movie }) => {
       </div>
       </Link>
       {usuario.isAuthenticated && (
-          <div>
+          <div className="fav">
             {favoritos.length > 0 ? (
               <button className="button is-danger" onClick={quitFavorite}>
                 <MdDelete />

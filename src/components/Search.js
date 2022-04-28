@@ -2,10 +2,10 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Content from "./Content";
 import { useParams } from "react-router";
+import { api_key } from "./../config.json";
 
 const Search = () => {
   const tmdbAPI = "https://api.themoviedb.org/3";
-  const api_key = "?api_key=3ba880eccd3167111b00500430da36aa&language=es-MX";
 
   const [searchMovie, setSearchMovie] = useState([]);
 

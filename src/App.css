@@ -1,0 +1,36 @@
+.boton {
+  position: absolute;
+  z-index: 2;
+}
+
+.fav {
+  position: absolute;
+  z-index: 2;
+  right: 5px;
+  top: 5px;
+}
+
+.drop {
+  background-color: #242424;
+  text-align: left;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  width: 125px;
+  z-index: 3;
+  padding: 10px;
+  border-radius: 0px 10px 10px 10px;
+  color: white;
+}
+
+.div {
+  text-align: center;
+  padding-bottom: 10px;
+  height: 1024px;
+}
+
+.img {
+  margin: 10px auto;
+  width: 500px;
+  height: 700px;
+}

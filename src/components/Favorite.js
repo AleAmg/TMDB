@@ -47,24 +47,3 @@ const Favorites = () => {
 };
 
 export default Favorites;
-/* 
-<div className="container is-fluid columns">
-      <div className="columns is-multiline layout">
-        {movie.results ? (
-          isFav.map((movie) => {
-            return (
-              <div className="column is-3" key={i}> 
-                <Link to={`/movie/${movie.id}`}>
-                  <Favorite2 key={movie.id} movie={movie.movieId}
-                </Link>
-              </div>
-            );
-          })
-        ) : (
-          <Link to={`/movie/${movie.id}`}>
-            <Card movie={movie} />
-          </Link>
-        )}
-      </div>
-    </div>
-*/

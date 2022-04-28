@@ -5,10 +5,10 @@ import { AuthContext } from "../context/auth";
 import { MdDelete, MdOutlineStarBorderPurple500 } from "react-icons/md";
 import swal from "sweetalert";
 import goku from "../assets/goku.jpg";
+import { api_key } from "./../config.json";
 
 const CardInfo = () => {
   const tmdbAPI = "https://api.themoviedb.org/3";
-  const api_key = "?api_key=3ba880eccd3167111b00500430da36aa&language=es-MX";
   const { id } = useParams();
   const [film, setFilm] = useState([]);
   const [isFav, setIsFav] = useState([]);
