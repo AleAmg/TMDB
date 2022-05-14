@@ -23,13 +23,14 @@ const NewUser = () => {
   };
 
   return (
-    <div>
+    <div className="max">
+      <div className="inputMax">
       <div className="container is-fluid">
-        <h1 className="title is-1 has-text-centered">Register</h1>
+        <h1 className="title is-1 has-text-centered has-text-light">Register</h1>
         <form onSubmit={handleSubmit}>
           <div className="field is-horizontal ">
             <div className="field-label is-normal">
-              <label className="label">User name</label>
+              <label className="label has-text-light">User name</label>
             </div>
             <div className="field-body">
               <div className="field">
@@ -47,7 +48,7 @@ const NewUser = () => {
 
           <div className="field is-horizontal ">
             <div className="field-label is-normal">
-              <label className="label">Email</label>
+              <label className="label has-text-light">Email</label>
             </div>
             <div className="field-body">
               <div className="field">
@@ -65,7 +66,7 @@ const NewUser = () => {
 
           <div className="field is-horizontal">
             <div className="field-label is-normal">
-              <label className="label">Password</label>
+              <label className="label has-text-light">Password</label>
             </div>
             <div className="field-body">
               <div className="field">
@@ -87,6 +88,7 @@ const NewUser = () => {
           </button>
         </form>
       </div>
+    </div>
     </div>
   );
 };

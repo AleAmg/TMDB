@@ -36,7 +36,7 @@ const DropDown = () => {
       ) : (
         <>
           <Link to={"/login"}>
-            <div className="buttons buttonDrop">
+            <div className="buttons">
               <button className="button my-2 is-light">Log In</button>
             </div>
           </Link>
@@ -46,7 +46,7 @@ const DropDown = () => {
             </div>
           </Link>
         </>
-      )}
+      )}  
     </div>
   );
 };

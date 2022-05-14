@@ -8,7 +8,7 @@ const Log = () => {
     return <h1 className="title is-1 has-text-centered">Log In first</h1>;
 
   return (
-    <div>
+    <div className="max">
       <h1 className="title is-1 has-text-centered">
         Hello {usuario.username}!
       </h1>

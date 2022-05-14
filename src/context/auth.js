@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 const authContextDefaultValues = {
   username: null,
-  email: null,
+  id: null,
   isAuthenticated: false,
   toggleAuth: () => null,
 };
@@ -13,7 +13,7 @@ const AuthContextProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(
     JSON.parse(localStorage.getItem("isLoggedIn")) || {
       username: null,
-      email: null,
+      id: null,
       isAuthenticated: false,
     }
   );

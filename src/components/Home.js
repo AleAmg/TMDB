@@ -5,9 +5,20 @@ import { api_key } from "./../config.json";
 
 const Home = () => {
   const tmdbAPI = "https://api.themoviedb.org/3";
-  const numero = Math.floor(Math.random() * (19 - 0)) + 0;
+  /* const numero = Math.floor(Math.random() * (19 - 0)) + 0; */
 
   const [movie, setMovie] = useState({});
+  const data = new Date().getDate() - 1;
+
+  let reqOfDay;
+
+  if (data > 19) {
+    reqOfDay = data - 19;
+  } else {
+    reqOfDay = data;
+  }
+
+  console.log(reqOfDay);
 
   const popular = async () => {
     try {
@@ -28,10 +39,10 @@ const Home = () => {
 
   return (
     <div className="div">
-      <h1 className="title is-1"> Welcome at TMDB</h1>
+      <h1 className="title is-1 "> Welcome at TMDB</h1>
       <h2 className="title is-3">Today we recommend you to watch:</h2>
       <div className="img">
-        {movie.results && <Card movie={movie.results[numero]} />}
+        {movie.results && <Card movie={movie.results[reqOfDay]} />}
       </div>
     </div>
   );

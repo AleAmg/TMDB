@@ -79,7 +79,7 @@ const CardInfo = () => {
   });
 
   return (
-    <div className="box">
+    <div className="info">
       <article className="media">
         <div className="media-left">
           <figure className="image">

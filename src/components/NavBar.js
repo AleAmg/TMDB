@@ -22,43 +22,44 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navbar has-background-black-ter mb-4">
+    <div className="nav">
+      <nav className="navbarFirst">
       <Link to={"/"}>
-        <h1 className="navbar-item title is-2 has-text-primary">TMDB</h1>
+        <h1>TMDB</h1>
       </Link>
-      <div className="navbar-item navbar-end">
-        <div className="navbar-item columns">
-          <form onSubmit={handleSubmit} className="columns">
-            <div className="buttons column" style={{ width: "1px" }}>
+
+      <div className="end">
+        <div>
+          <form onSubmit={handleSubmit}>
+            <div className="buttons but">
               <button className="button my-3 is-light">
                 <GoSearch />
               </button>
             </div>
-            <div className="column is-four-fifths">
-              <input
-                {...search}
-                className="input my-3"
-                type="text"
-                placeholder="Search movie"
-              />
-            </div>
+            <input 
+              {...search}
+              className="input my-3 it"
+              type="text"
+              placeholder="Search movie"
+              
+            />
           </form>
         </div>
-      </div>
-      <div>
-        <div className="navbar-item columns">
-          <div className="buttons column">
+        <div>
+          <div className="buttons">
             <button
               onClick={drop ? () => setDrop(false) : () => setDrop(true)}
-              className="button my-2 is-light"
+              className="button my-3 is-light"
             >
               <GiHamburgerMenu />
             </button>
+
+            {drop && <DropDown onClick={() => setDrop(false)} />}
           </div>
-          {drop && <DropDown onClick={() => setDrop(false)} />}
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 export default NavBar;

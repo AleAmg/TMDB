@@ -28,7 +28,7 @@ const Card = ({ movie }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reset]);
 
-   const addFavorite = async (e) => {
+  const addFavorite = async (e) => {
     e.preventDefault();
     try {
       await axios.post("/api/favoritos/add", {
@@ -59,15 +59,15 @@ const Card = ({ movie }) => {
       console.log(err);
     }
   };
-  
+
   const favoritos = isFav.filter((favorite) => {
-    return parseInt(movie.id) === favorite.movieId; 
+    return parseInt(movie.id) === favorite.movieId;
   });
   return (
     <div className="card">
       <Link to={`/movie/${movie.id}`}>
         <div className="card-image">
-          <figure className="image ">
+          <figure className="image is-3by4">
             <img
               src={
                 movie.poster_path
@@ -78,31 +78,26 @@ const Card = ({ movie }) => {
             ></img>
           </figure>
         </div>
-      
-      
-      <div className="card-content">
-        <div className="media">
-          <div className="media-left">
-            <div className="media-content">
-              <p className="title is-6">{movie.title}</p>
-            </div>
+
+        <div className="card-content">
+          <div className="content">
+            <p className="title is-6 titulo">{movie.title}</p>
           </div>
         </div>
-      </div>
       </Link>
       {usuario.isAuthenticated && (
-          <div className="fav">
-            {favoritos.length > 0 ? (
-              <button className="button is-danger" onClick={quitFavorite}>
-                <MdDelete />
-              </button>
-            ) : (
-              <button className="button is-warning" onClick={addFavorite}>
-                <MdOutlineStarBorderPurple500 />
-              </button>
-            )}
-          </div>
-        )}
+        <div className="fav">
+          {favoritos.length > 0 ? (
+            <button className="button is-danger" onClick={quitFavorite}>
+              <MdDelete />
+            </button>
+          ) : (
+            <button className="button is-warning" onClick={addFavorite}>
+              <MdOutlineStarBorderPurple500 />
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 };

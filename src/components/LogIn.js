@@ -31,47 +31,55 @@ const LogIn = () => {
   };
 
   return (
-    <div className="container is-fluid">
-      <h1 className="title is-1 has-text-centered">Log In</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="field is-horizontal ">
-          <div className="field-label is-normal">
-            <label className="label">Email</label>
-          </div>
-          <div className="field-body">
-            <div className="field">
-              <div className="control">
-                <input
-                  {...email}
-                  className="input"
-                  type="email"
-                  placeholder="Email"
-                ></input>
+    <div className="max">
+      <div className="inputMax">
+        <div className="container is-fluid  ">
+          <h1 className="title is-1 has-text-centered has-text-light">
+            Log In
+          </h1>
+          <form onSubmit={handleSubmit}>
+            <div className="field is-horizontal ">
+              <div className="field-label is-normal">
+                <label className="label has-text-light">Email</label>
+              </div>
+              <div className="field-body">
+                <div className="field">
+                  <div className="control">
+                    <input
+                      {...email}
+                      className="input"
+                      type="email"
+                      placeholder="Email"
+                    ></input>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div className="field is-horizontal">
-          <div className="field-label is-normal">
-            <label className="label">Password</label>
-          </div>
-          <div className="field-body">
-            <div className="field">
-              <div className="control">
-                <input
-                  {...password}
-                  className="input"
-                  type="password"
-                  placeholder="Password"
-                ></input>
+            <div className="field is-horizontal">
+              <div className="field-label is-normal">
+                <label className="label has-text-light">Password</label>
+              </div>
+              <div className="field-body">
+                <div className="field">
+                  <div className="control">
+                    <input
+                      {...password}
+                      className="input"
+                      type="password"
+                      placeholder="Password"
+                    ></input>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <button className="button navbar-end is-responsive label">Send</button>
-      </form>
+            <button className="button navbar-end is-responsive label">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

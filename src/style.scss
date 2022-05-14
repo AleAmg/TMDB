@@ -1,0 +1,106 @@
+body {
+  background-color: #bababa;
+  padding-bottom: 10px;
+}
+
+.navbarFirst {
+  background-color: #242424;
+  height: 88px;
+  width: 100%;
+  display: block;
+  position: fixed;
+  z-index: 999;
+  h1 {
+    color: #00d1b2;
+    display: flex;
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+  .end {
+    position: relative;
+    float: right;
+    top: -78px;
+    display: flex;
+    padding: 0.5rem 0.75rem;
+  }
+}
+.but {
+  position: relative;
+  right: 80px;
+}
+.it {
+  display: flex;
+  position: relative;
+  top: -80px;
+  right: 20px;
+}
+
+.nav {
+  height: 120px;
+}
+
+.inputMax {
+  background-color: #242424;
+  width: 750px;
+  margin: 25px auto;
+  padding: 25px;
+  border: 1px solid;
+  border-radius: 30px;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+.max {
+  height: 803px;
+}
+
+.boton {
+  position: absolute;
+  z-index: 2;
+}
+
+.fav {
+  position: absolute;
+  z-index: 2;
+  right: 5px;
+  top: 5px;
+}
+
+.drop {
+  background-color: #242424;
+  position: fixed;
+  top: 88px;
+  right: 0px;
+  width: 125px;
+  z-index: 3;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  color: white;
+}
+
+.div {
+  text-align: center;
+  padding-bottom: 10px;
+  height: 1024px;
+}
+
+.img {
+  margin: 10px auto;
+  width: 320px;
+  height: 450px;
+}
+
+.imagen {
+  height: 516px;
+}
+.titulo {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.info {
+  padding: 24px;
+  
+}
