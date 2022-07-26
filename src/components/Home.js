@@ -5,7 +5,6 @@ import { api_key } from "./../config.json";
 
 const Home = () => {
   const tmdbAPI = "https://api.themoviedb.org/3";
-  /* const numero = Math.floor(Math.random() * (19 - 0)) + 0; */
 
   const [movie, setMovie] = useState({});
   const data = new Date().getDate() - 1;
@@ -17,8 +16,6 @@ const Home = () => {
   } else {
     reqOfDay = data;
   }
-
-  console.log(reqOfDay);
 
   const popular = async () => {
     try {

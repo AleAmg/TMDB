@@ -69,6 +69,7 @@ const Card = ({ movie }) => {
         <div className="card-image">
           <figure className="image is-3by4">
             <img
+              className="card__image"
               src={
                 movie.poster_path
                   ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`

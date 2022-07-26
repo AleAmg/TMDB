@@ -8,7 +8,7 @@ const Content = ({ movie }) => {
         {movie.results.length > 3
           ? movie.results.map((movie, i) => {
               return (
-                <div className="column is-3" key={i}>
+                <div className="column is-3" key={i}> 
                   <Card movie={movie} />
                 </div>
               );
