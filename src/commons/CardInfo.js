@@ -38,7 +38,9 @@ const CardInfo = () => {
 
   useEffect(() => {
     oneMovie();
-    isFavorite();
+    if (usuario.isAuthenticated) {
+      isFavorite();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, reset]);
 
