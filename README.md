@@ -1,4 +1,5 @@
 # TMDB
+<<<<<<< HEAD
 
 Es una pagina web realizada en el plazo de una semana de forma individual, durante el Coding Bootcamp de Plataforma 5 la cual consuma la API The Movie Data Base (TMDB).
 
@@ -12,7 +13,4 @@ Link: - [TMDB](https://tmdb-aleamg.vercel.app/home)
 |-------- |--------|--------|
 |![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)|![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)|![Sass](https://img.shields.io/badge/sass-%23593d88.svg?style=for-the-badge&logo=sass&logoColor=white)|
 |![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)|[Passport.js](https://img.shields.io/badge/passport-%2320232a.svg?style=for-the-badge&logo=passport&logoColor=%FFF)|![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)|
-
-
-
 
