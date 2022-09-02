@@ -1,6 +1,10 @@
+html {
+  height: 100%;
+  background-color: #bababa;
+}
 body {
   background-color: #bababa;
-  padding-bottom: 10px;
+  height: 100%;
 }
 
 .navbarFirst {
@@ -83,7 +87,6 @@ body {
 .div {
   text-align: center;
   padding-bottom: 10px;
-  height: 1024px;
 }
 
 .img {
@@ -103,5 +106,37 @@ body {
 }
 .info {
   padding: 24px;
+}
+
+.container__card {
+  background-color: #bababa;
+  padding-bottom: 30px;
+}
+.info__card--img {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  img {
+    margin: 15px;
+  }
+  .button{
+    margin-top: 17px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .info__card--display {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+  .info {
+    background-color: #bababa;
+    
+  }
   
 }

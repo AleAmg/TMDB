@@ -21,7 +21,7 @@ const Search = () => {
   }, [search]);
 
   return (
-    <div className="container is-fluid">
+    <div className="container is-fluid container__card">
       <div className="my-5">
         {searchMovie.results && <Content movie={searchMovie} />}
       </div>

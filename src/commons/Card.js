@@ -24,7 +24,10 @@ const Card = ({ movie }) => {
   };
 
   useEffect(() => {
-    isFavorite();
+    if (usuario.isAuthenticated) {
+      isFavorite();
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reset]);
 

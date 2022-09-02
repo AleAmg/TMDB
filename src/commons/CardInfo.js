@@ -80,8 +80,8 @@ const CardInfo = () => {
 
   return (
     <div className="info">
-      <article className="media">
-        <div className="media-left">
+      <article className="media info__card--display">
+        <div className="media-left info__card--img">
           <figure className="image">
             <img
               src={
@@ -93,6 +93,19 @@ const CardInfo = () => {
               style={{ width: "560px", height: "780px", borderRadius: "35px" }}
             ></img>
           </figure>
+          {usuario.isAuthenticated && (
+            <div>
+              {favoritos.length > 0 ? (
+                <button className="button is-danger" onClick={quitFavorite}>
+                  <MdDelete />
+                </button>
+              ) : (
+                <button className="button is-warning" onClick={addFavorite}>
+                  <MdOutlineStarBorderPurple500 />
+                </button>
+              )}
+            </div>
+          )}
         </div>
         <div className="media-content">
           <div className="content">
@@ -128,19 +141,6 @@ const CardInfo = () => {
             </dl>
           </div>
         </div>
-        {usuario.isAuthenticated && (
-          <div>
-            {favoritos.length > 0 ? (
-              <button className="button is-danger" onClick={quitFavorite}>
-                <MdDelete />
-              </button>
-            ) : (
-              <button className="button is-warning" onClick={addFavorite}>
-                <MdOutlineStarBorderPurple500 />
-              </button>
-            )}
-          </div>
-        )}
       </article>
     </div>
   );

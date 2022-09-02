@@ -1,6 +1,11 @@
+html {
+  height: 100%;
+  background-color: #bababa;
+}
+
 body {
   background-color: #bababa;
-  padding-bottom: 10px;
+  height: 100%;
 }
 
 .navbarFirst {
@@ -96,7 +101,6 @@ body {
 .div {
   text-align: center;
   padding-bottom: 10px;
-  height: 1024px;
 }
 
 .img {
@@ -119,5 +123,47 @@ body {
 
 .info {
   padding: 24px;
+}
+
+.container__card {
+  background-color: #bababa;
+  padding-bottom: 30px;
+}
+
+.info__card--img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info__card--img img {
+  margin: 15px;
+}
+
+.info__card--img .button {
+  margin-top: 17px;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+@media (max-width: 767px) {
+  .info__card--display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .info {
+    background-color: #bababa;
+  }
 }
 /*# sourceMappingURL=style.css.map */
