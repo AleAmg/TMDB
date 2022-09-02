@@ -1,5 +1,4 @@
 # TMDB
-<<<<<<< HEAD
 
 Es una pagina web realizada en el plazo de una semana de forma individual, durante el Coding Bootcamp de Plataforma 5 la cual consuma la API The Movie Data Base (TMDB).
 
