@@ -1,6 +1,6 @@
 {
   "name": "26-tmdb",
-  "version": "0.2.0",
+  "version": "1.2.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
