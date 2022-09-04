@@ -6,10 +6,13 @@ const cookieParser = require("cookie-parser");
 const sessions = require("express-session");
 const passport = require("passport");
 const passportConfig = require("./config/passport");
+const cors = require("cors");
 
 const router = require("./routes");
 
 const app = express();
+
+app.use(cors());
 
 app.use(morgan("dev"));
 app.use(express.json());
