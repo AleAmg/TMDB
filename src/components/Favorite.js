@@ -9,9 +9,12 @@ const Favorites = () => {
 
   const isFavorite = async () => {
     try {
-      const { data } = await axios.post("/api/favoritos", {
-        userId: usuario.id,
-      });
+      const { data } = await axios.post(
+        `${process.env.REACT_APP_SERVER_URL}/api/favoritos`,
+        {
+          userId: usuario.id,
+        }
+      );
       setIsFav(data);
     } catch (err) {
       console.log(err);

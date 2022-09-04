@@ -11,7 +11,7 @@ const NewUser = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      await axios.post("/api/user/newUser", {
+      await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/user/newUser`, {
         username: username.value,
         email: email.value,
         password: password.value,

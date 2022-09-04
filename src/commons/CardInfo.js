@@ -27,9 +27,12 @@ const CardInfo = () => {
 
   const isFavorite = async () => {
     try {
-      const { data } = await axios.post("/api/favoritos", {
-        userId: usuario.id,
-      });
+      const { data } = await axios.post(
+        `${process.env.REACT_APP_SERVER_URL}/api/favoritos`,
+        {
+          userId: usuario.id,
+        }
+      );
       setIsFav(data);
     } catch (err) {
       console.log(err);
@@ -47,10 +50,13 @@ const CardInfo = () => {
   const addFavorite = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/favoritos/add", {
-        movieId: id,
-        userId: usuario.id,
-      });
+      await axios.post(
+        `${process.env.REACT_APP_SERVER_URL}/api/favoritos/add`,
+        {
+          movieId: id,
+          userId: usuario.id,
+        }
+      );
       setReset(reset + 1);
       swal({
         title: "Add to favorite",
@@ -64,7 +70,9 @@ const CardInfo = () => {
   const quitFavorite = async () => {
     try {
       await axios.delete(
-        `/api/favoritos/delete/${parseInt(id)}/${parseInt(usuario.id)}`
+        `/${process.env.REACT_APP_SERVER_URL}api/favoritos/delete/${parseInt(
+          id
+        )}/${parseInt(usuario.id)}`
       );
       setReset(reset + 1);
       swal({
