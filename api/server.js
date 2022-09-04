@@ -32,7 +32,11 @@ passport.serializeUser(passportConfig.serializeUserCb);
 
 passport.deserializeUser(passportConfig.deserializeUserCb);
 
-app.use("/api", router); 
+app.use("/api", router);
+
+app.use("/test", (req, res, next) => {
+  res.send("testing");
+});
 
 app.use("/api", (req, res) => {
   res.sendStatus(404);
@@ -43,6 +47,7 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 3001;
+
 db.sync({ force: false }).then(() =>
   app.listen(PORT, () => console.log(`Listening in port ${PORT}`))
 );
