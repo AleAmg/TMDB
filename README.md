@@ -2,7 +2,7 @@
 
 Es una pagina web realizada en el plazo de una semana de forma individual, durante el Coding Bootcamp de Plataforma 5 la cual consume la API The Movie Data Base (TMDB).
 
-En ella podes buscar peliculas ver su informacion y agregarlas a una lista de favoritos.
+En ella podes buscar peliculas ver su información y agregarlas a una lista de favoritos.
 
 ### 🛠 Tecnologias y herramientas utilizadas
 
