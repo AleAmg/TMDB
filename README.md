@@ -4,8 +4,6 @@ Es una pagina web realizada en el plazo de una semana de forma individual, duran
 
 En ella podes buscar peliculas ver su informacion y agregarlas a una lista de favoritos.
 
-Link: - [TMDB](https://tmdb-aleamg.vercel.app/home)
-
 ### 🛠 Tecnologias y herramientas utilizadas
 
 |![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)|![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)|![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)|
